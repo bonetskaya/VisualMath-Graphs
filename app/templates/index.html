@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+  
+    <h2> Hello,  
+    {% if current_user.anonymous %}
+    Stranger!
+    {% else %}
+    {{ current_user.username }}! </h2> 
+    {% endif %}
+    <p>Here you can see all interactive lectures</p>
+
+{% endblock %}
