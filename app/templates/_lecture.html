@@ -1,5 +1,6 @@
     <table class="table table-hover">
         <tr>
-            <td width="70px"><b>{{ lecture.name }}</b></td>
+            <td width="70px"><b><a href="
+                {{ url_for('show_lecture', lecture_name=lecture.path, username=current_user.username)}}">{{ lecture.name }}</a></b></td>
         </tr>
     </table>

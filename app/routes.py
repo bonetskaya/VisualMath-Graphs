@@ -56,3 +56,9 @@ def progress(username):
     user = User.query.filter_by(username=username).first_or_404()
     lectures = Lecture.query.all()
     return render_template('lectures.html', user=user, lectures=lectures)
+
+
+@app.route('/<username>/lectures/<lecture_name>')
+@login_required
+def show_lecture(username, lecture_name):
+    return render_template('lectures/' + lecture_name)
